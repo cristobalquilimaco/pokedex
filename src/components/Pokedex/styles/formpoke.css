@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@700&family=Sen&family=Tajawal:wght@500&display=swap');
+.form__input__poke{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+
+}
+
+.input__poke{
+
+width: auto;
+
+}
+
+.form__search__poke{
+
+    display: flex;
+margin: 1rem;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+}
+
+.select__type{
+
+    background-color: salmon;
+    width: 400px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    font-family: 'Catamaran', sans-serif;
+    font-family: 'Sen', sans-serif;
+    font-family: 'Tajawal', sans-serif;
+text-transform: capitalize;
+margin: 1rem;
+
+
+}
+
+
+.select_poke_search {
+background-color: rgb(255, 255, 255);
+outline-color: aqua;
+margin: 1rem;
+text-transform: capitalize;
+font-size: 18px;
+}
+

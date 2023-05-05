@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@700&family=Sen&display=swap');
+
+
+/* --- RESET --- */
+* {
+    box-sizing: border-box;
+  }
+  html {
+    font-family: 'DM Sans', sans-serif;
+  }
+  body{
+    margin: 0;
+  }
+  h1, h2, h3, h4, p, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  input {
+    outline: none;
+    font-family: inherit;
+    height: 40px;
+    border: none;
+  }
+  button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background-color: #DD1A1A;
+    width: 100px;
+    height: 40px;
+  }
+  select {
+    font-family: inherit;
+  }
+  img {
+    width: 100%;
+  }
