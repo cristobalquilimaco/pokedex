@@ -16,7 +16,8 @@ width: 150px;
 .form__search__poke{
 
     display: flex;
-    margin: 1rem;
+    margin-left: 2.2rem;
+    margin-right: 0.4rem;
     width: auto;
     align-items: center;
     justify-content: space-around;
@@ -30,9 +31,9 @@ width: 150px;
     background-color: salmon;
     width: auto;
     height: 40px;
-    margin-right: 1rem;
+    margin-right: 2rem;
     border: none;
-    font-size: 10px;
+    font-size: 13px;
     font-family: 'Catamaran', sans-serif;
     font-family: 'Sen', sans-serif;
     font-family: 'Tajawal', sans-serif;
