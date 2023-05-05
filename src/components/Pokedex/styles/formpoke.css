@@ -2,7 +2,7 @@
 .form__input__poke{
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
+    justify-content:center;
     align-items: center;
 
 }
@@ -25,7 +25,7 @@ width: auto;
 .select__type{
 
     background-color: salmon;
-    width: 400px;
+    width: auto;
     height: 40px;
     border: none;
     font-size: 20px;
