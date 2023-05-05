@@ -72,13 +72,13 @@ console.log();
           {
             pokemon?.stats.map(objStat => (
               <li className="pokemon__stats-specific2" key={objStat.stat.url}>
-                <span className="pokemon__stats-label">{objStat.stat.name}</span>
-                <div className='progressbar' >
+                <span className="pokemon__stats-label1">{objStat.stat.name}</span>
+          
                 <progress className="progress_bar" min="1" max="150" value={objStat.base_stat}></progress>
-                </div>
+            
                 
       
-                <span className={`pokemon__stats-value color-${pokemon?.types[0].type.name}`}>{objStat.base_stat}</span>
+                <span className={`pokemon__stats-value1 color-${pokemon?.types[0].type.name}`}>{objStat.base_stat}</span>
 
               </li>
             ))

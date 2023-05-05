@@ -19,7 +19,7 @@
 
 
 .pokemon__sprite{
-    width: 60%;
+    width: 40%;
     position: absolute;
     left: 50%;
     top: 20%;
@@ -311,3 +311,8 @@
     background-color:#0D1211;
     padding: 4px 20px;
 }
+
+
+@media (min-width: 992px) {
+
+  }
