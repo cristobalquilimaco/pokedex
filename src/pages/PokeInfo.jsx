@@ -33,7 +33,7 @@ console.log();
             <img className="pokemon__img" src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
             </header>
          <div className='namepokemon'>
-         <h2 className={`color-${pokemon?.types[0].type.name}`}>{pokemon?.name}</h2>
+         <h2 className={` color-${pokemon?.types[0].type.name}`}>{pokemon?.name}</h2>
           </div>          
         <div className='context__poke'>
         <ul className='poke_list'>
@@ -50,17 +50,17 @@ console.log();
             <p>Abilities</p>
           </div>
           <div className='principal__types'>
-          <ul className={`principal__types1 color__bacground-${pokemon?.types[0].type.name}`}>
+          <ul className='principal__types1'>
           {
             pokemon?.types.map(objType => (
-              <li className="pokemon__type-specifics" key={objType.type.url}>{objType.type.name}</li>
+              <li className={`pokemon__type-specifics1 color__background-${pokemon?.types[0].type.name}`}>{objType.type.name}</li>
             ))
           }
         </ul>
 
         <ul className='principal__types1'>{
             pokemon?.abilities.map(objAbility => (
-                <li className='pokemon__type-specifics' key={objAbility.ability.url}>{objAbility.ability.name}</li>
+                <li className='pokemon__type-specifics1' key={objAbility.ability.url}>{objAbility.ability.name}</li>
             ))
             }
         </ul>

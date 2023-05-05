@@ -245,51 +245,69 @@
 
 
 /*COLOR background*/
-.color__bacground-grass{
+.color__background-grass{
     background-color: #ABDAC6;
+    padding: 4px 20px;
+
+    
 }
-.color__bacground-water{
+.color__background-water{
     background-color: #1479FB;
+    padding: 4px 20px;
 }
-.color__bacground-bug{
+.color__background-bug{
     background-color: #3BB039;
+    padding: 4px 20px;
 }
-.color__bacground-ice{
+.color__background-ice{
     background-color: #64CBF5;
+    padding: 4px 20px;
 }
-.color__bacground-rock{
+.color__background-rock{
     background-color: #8D8D94;
+    padding: 4px 20px;
 }
-.color__bacground-fairy{
+.color__background-fairy{
     background-color:#C23867;
+    padding: 4px 20px;
 }
-.color__bacground-fire{
+.color__background-fire{
     background-color:#E35825;
+    padding: 4px 20px;
 }
-.color__bacground-poison{
+.color__background-poison{
     background-color:#A564E3;
+    padding: 4px 20px;
 }
-.color__bacground-normal{
+.color__background-normal{
     background-color: #BC6B7C;
+    padding: 4px 20px;
 }
-.color__bacground-ghost{
+.color__background-ghost{
     background-color:#454AA8;
+    padding: 4px 20px;
 }
-.color__bacground-fighting{
-    background-color:#F1613C
+.color__background-fighting{
+    background-color:#F1613C;
+    padding: 4px 20px;
 }
-.color__bacground-psychic{
+.color__background-psychic{
     background-color: #D13E3E;
+    padding: 4px 20px;
 }
-.color__bacground-electric{
+.color__background-electric{
     background-color:rgb(226, 211, 4);
+    padding: 4px 20px;
 }
-.color__bacground-ground{
+.color__background-ground{
     background-color: #B87818;
+    padding: 4px 20px;
 }
-.color__bacground-dragon{
+.color__background-dragon{
     background-color:#56A4AE;
+    padding: 4px 20px;
 }
-.color__bacground-dark{
+.color__background-dark{
     background-color:#0D1211;
+    padding: 4px 20px;
 }

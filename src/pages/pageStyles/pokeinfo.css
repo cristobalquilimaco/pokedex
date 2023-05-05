@@ -5,7 +5,6 @@ justify-content: space-around;
 font-size: 20px;
 font-weight: 600;
 margin-bottom: -20px;
-gap: 1rem;
 }
 
 
@@ -30,7 +29,7 @@ padding: 1rem;
 }
 
 .poke_render{
-    margin: 1rem;
+  margin: 1rem;
 }
 
 .poke__card__individual{
@@ -39,7 +38,7 @@ padding: 1rem;
     box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
  display: flex;
  flex-direction: column;
-margin-bottom: 4rem;
+margin-bottom: 2rem;
 }
 
 
@@ -48,7 +47,7 @@ margin-bottom: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 100px;
     text-transform: capitalize;
 
 }
@@ -79,26 +78,31 @@ margin-bottom: 4rem;
     align-items: center;
   }
 
-  .principal__types{
-    display: grid;
-    grid-template-columns: repeat(6, 2fr);
-    grid-template-rows: repeat(auto);
-    text-transform: capitalize;
+  .titles__pokemons{
 
-   
-    padding: 1rem;
+    margin-bottom: 0.2rem;
   }
 
-  .principal__types1{
-
+  .principal__types{
     display: grid;
-    grid-template-columns: repeat(6, 2fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(auto);
-    gap: 1rem;
+    text-transform: capitalize;
+    margin: 0.2rem;
+
+    font-size: 14px;
+    
+
+  }
 
 
-   
-    padding: 1rem;
+  .principal__types1{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(auto);
+align-items: center;
+gap: 5px;
+
   }
 
 
