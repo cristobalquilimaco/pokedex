@@ -14,10 +14,10 @@ const Home = () => {
         <footer className='poke__footer'>
           <div className='footer__red'></div>
           <div className='circles_home'>
-          <div class="circle1_home"></div>
-          <div class="circle2_home"></div>
-          <div class="circle3_home"></div>
-          <div class="circle4_home"></div>
+          <div className="circle1_home"></div>
+          <div className="circle2_home"></div>
+          <div className="circle3_home"></div>
+          <div className="circle4_home"></div>
           </div>
 
           <div className='footer__black'></div>

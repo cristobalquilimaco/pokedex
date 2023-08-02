@@ -1,12 +1,17 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import useFetch from '../../hooks/UseFetch'
 import PokeCard from './PokeCard'
 import './styles/pokeContainer.css'
+import Pagination from './Pagination'
 
 
 
 
-const PokeContainer = ({formUrl}) => {
+const PokeContainer = ({formUrl, pokePerPage, currentPoke }) => {
+
+
+  const lastIndex = currentPoke * pokePerPage
+  const firstIndex = lastIndex - pokePerPage
 
 
   const [pokemons, getAllPokemons] = useFetch(formUrl)
@@ -15,9 +20,9 @@ const PokeContainer = ({formUrl}) => {
     getAllPokemons()
   }, [formUrl])
 
-  console.log(pokemons);
+
  
-  
+
 
   return (
     <div className='poke__container'>
@@ -37,12 +42,14 @@ const PokeContainer = ({formUrl}) => {
               key={objectPoke.pokemon.url}
               url={objectPoke.pokemon.url}
               />  
-              ))
+              )).slice(firstIndex, lastIndex)
             )
            
            
            }
+
     </div>
+         
   )
 }
 

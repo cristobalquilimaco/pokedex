@@ -20,8 +20,6 @@ getAllTypes()
 }, [])
 
 
-console.log(types);
-
 
         const handleSubmit = e => {
 e.preventDefault()
