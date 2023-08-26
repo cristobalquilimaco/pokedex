@@ -4,33 +4,33 @@ import FormPoke from '../components/Pokedex/FormPoke'
 import PokeContainer from '../components/Pokedex/PokeContainer'
 import pokedexImg from '/public/pokedexImg.png'
 import './pageStyles/pokedex.css'
-import Pagination from '../components/Pokedex/Pagination'
+
 import useFetch from '../hooks/UseFetch'
 
 
 
 
 const Pokedex = () => {
+ 
 
-  const [pokePerPage, setPokePerPage] = useState(10);
+  const [pokePerPage, setPokePerPage] = useState(8);
   const [currentPoke, setCurrentPoke] = useState(1)
-  
+  const [limitValue, setLimitValue] = useState(pokePerPage)
 
-
-  const urlBase = 'https://pokeapi.co/api/v2/pokemon?limit=10&offset=10.'
+  const urlBase = `https://pokeapi.co/api/v2/pokemon?limit=${limitValue}&offset=0`
   const [formUrl, setFormUrl] = useState(urlBase)
   const { trainerName } = useSelector(state => state)
-  const [pokemons, getAllPokemons] = useFetch(formUrl, urlBase)
-  const [poke, setPoke] = useState(urlBase)
+  const [pokemons, getAllPokemons] = useFetch(urlBase)
+
+
+  // Pagination
 
   useEffect(() => {
-    getAllPokemons()
-  }, [formUrl, urlBase])
-
-  const totalPokemons = poke?.length;
-console.log(totalPokemons)
+    getAllPokemons(urlBase);
+  }, [formUrl, urlBase]);
   
-
+  const totalPokemons = pokemons?.count;
+  
     return (
     <div className='page__selectpokemon'>
       <div className='pokedex__header'>
@@ -58,22 +58,25 @@ console.log(totalPokemons)
       </div>
       <p className='user__trainer__name'>Welcome <span className='trainer'>{trainerName}</span></p>
         <div className='search__poke'>
-        <FormPoke urlBase={urlBase} setFormUrl={setFormUrl}/>
-       
+        <FormPoke urlBase={urlBase} setFormUrl={setFormUrl}
+              pokePerPage={pokePerPage}
+              currentPoke={currentPoke}
+              pokemons={pokemons}
+              setLimitValue={setLimitValue}
+        />
         </div>
         <PokeContainer formUrl={formUrl}
         pokePerPage={pokePerPage}
         currentPoke={currentPoke}
         totalPokemons={totalPokemons}
-        />
-        <Pagination
         urlBase={urlBase}
-        pokePerPage={pokePerPage}
-        currentPoke={currentPoke}
+
+    
+  
+        setPokePerPage={setPokePerPage}
         setCurrentPoke={setCurrentPoke}
-        totalPokemons={totalPokemons}
-       
         />
+
     </div>
   )
 }

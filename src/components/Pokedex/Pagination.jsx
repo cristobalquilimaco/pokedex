@@ -1,16 +1,14 @@
-import React from 'react';
-
 const Pagination = ({
   pokePerPage,
-  urlBase,
   currentPoke,
-  setPokePerPage,
   setCurrentPoke,
   totalPokemons,
 }) => {
   const pageNumbers = [];
-
-  for (let i = 1; i <= Math.ceil(totalPokemons / pokePerPage); i++) {
+  const maxVisiblePages = 10;
+  const startPage = Math.max(1, currentPoke - Math.floor(maxVisiblePages + 1));
+  
+  for (let i = startPage; i <= Math.min(startPage + maxVisiblePages - 1, Math.ceil(totalPokemons / pokePerPage)); i++) {
     pageNumbers.push(i);
   }
 
@@ -29,8 +27,8 @@ const Pagination = ({
     }
   };
 
-  const onSpecificPage = (n) => {
-    setCurrentPoke(n);
+  const onSpecificPage = (pageNumber) => {
+    setCurrentPoke(pageNumber);
   };
 
   return (

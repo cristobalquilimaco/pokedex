@@ -5,9 +5,8 @@ import './styles/pokeContainer.css'
 import Pagination from './Pagination'
 
 
-
-
-const PokeContainer = ({formUrl, pokePerPage, currentPoke }) => {
+const PokeContainer = ({formUrl, pokePerPage, currentPoke, setCurrentPoke,
+  totalPokemons }) => {
 
 
   const lastIndex = currentPoke * pokePerPage
@@ -47,7 +46,12 @@ const PokeContainer = ({formUrl, pokePerPage, currentPoke }) => {
            
            
            }
-
+<Pagination
+             pokePerPage={pokePerPage}
+             currentPoke={currentPoke}
+             setCurrentPoke={setCurrentPoke}
+             totalPokemons={totalPokemons}
+     />
     </div>
          
   )
