@@ -4,6 +4,7 @@ import FormPoke from '../components/Pokedex/FormPoke'
 import PokeContainer from '../components/Pokedex/PokeContainer'
 import pokedexImg from '/public/pokedexImg.png'
 import './pageStyles/pokedex.css'
+import Pagination from '../components/Pokedex/Pagination'
 
 import useFetch from '../hooks/UseFetch'
 
@@ -13,11 +14,11 @@ import useFetch from '../hooks/UseFetch'
 const Pokedex = () => {
  
 
-  const [pokePerPage, setPokePerPage] = useState(8);
+  const [pokePerPage, setPokePerPage] = useState(10);
   const [currentPoke, setCurrentPoke] = useState(1)
   const [limitValue, setLimitValue] = useState(pokePerPage)
 
-  const urlBase = `https://pokeapi.co/api/v2/pokemon?limit=${limitValue}&offset=0`
+  const urlBase = `https://pokeapi.co/api/v2/pokemon?limit=${limitValue}&offset=${currentPoke}`
   const [formUrl, setFormUrl] = useState(urlBase)
   const { trainerName } = useSelector(state => state)
   const [pokemons, getAllPokemons] = useFetch(urlBase)
@@ -70,12 +71,16 @@ const Pokedex = () => {
         currentPoke={currentPoke}
         totalPokemons={totalPokemons}
         urlBase={urlBase}
-
-    
-  
         setPokePerPage={setPokePerPage}
         setCurrentPoke={setCurrentPoke}
         />
+
+<Pagination
+             pokePerPage={pokePerPage}
+             currentPoke={currentPoke}
+             setCurrentPoke={setCurrentPoke}
+             totalPokemons={totalPokemons}
+     />
 
     </div>
   )

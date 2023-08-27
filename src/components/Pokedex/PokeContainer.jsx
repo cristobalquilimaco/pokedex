@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react'
 import useFetch from '../../hooks/UseFetch'
 import PokeCard from './PokeCard'
 import './styles/pokeContainer.css'
-import Pagination from './Pagination'
 
 
-const PokeContainer = ({formUrl, pokePerPage, currentPoke, setCurrentPoke,
-  totalPokemons }) => {
+
+const PokeContainer = ({formUrl, pokePerPage, currentPoke, }) => {
 
 
   const lastIndex = currentPoke * pokePerPage
@@ -46,12 +45,6 @@ const PokeContainer = ({formUrl, pokePerPage, currentPoke, setCurrentPoke,
            
            
            }
-<Pagination
-             pokePerPage={pokePerPage}
-             currentPoke={currentPoke}
-             setCurrentPoke={setCurrentPoke}
-             totalPokemons={totalPokemons}
-     />
     </div>
          
   )
