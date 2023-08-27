@@ -13,7 +13,7 @@ margin-bottom: 2rem;
   width: 60%;
   position: absolute;
   left: 50%;
-  top: 20%;
+  top: -5%;
   transform: translateX(-50%);
 }
 
@@ -23,6 +23,9 @@ justify-content: space-around;
 font-size: 20px;
 font-weight: 600;
 margin-bottom: -20px;
+}
+.name_poke_pp{
+font-size: 30px;
 }
 
 
@@ -213,6 +216,47 @@ gap: 2px;
   
   @media (min-width: 992px) {
 
+    .principal_poke{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .poke_render{
+      width: 750px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pokemon__img{
+      width: 45%;
+      position: absolute;
+      left: 50%;
+      top: 5%;
+      transform: translateX(-50%);
+      }
+
+      .poke__moves{
+        width: 540px;
+      }
+
+              
+
+    /* .pokemon__header{
+      width: 750px;
+    }
+
+
+    .poke_render{
+      width: 750px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
 
     .poke__card__individual{
@@ -222,11 +266,10 @@ gap: 2px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
-    padding: 5rem;
+    width: 750px;
     }
 .pokemon__img{
-width: 20%;
+width: 40%;
 position: absolute;
 left: 50%;
 top: 5%;
@@ -236,6 +279,7 @@ transform: translateX(-50%);
 .titles__pokemons{
 display: flex;
 margin: 1rem;
+width: 750px;
 }
 
 .namepokemon{
@@ -244,6 +288,7 @@ align-items: center;
 justify-content: center;
 margin-top: 130px;
 text-transform: capitalize;
+width: 750px;
 
 }
 
@@ -254,27 +299,15 @@ grid-template-rows: repeat(auto);
 text-transform: capitalize;
 margin: 0.2rem;
 font-size: 14px;
+width: 700px;
 }
 
 .pokemon__type-specifics1{
 display: flex;
 justify-content: center;
-width: 300px;
 }
 
-.pokemon__stats-specific2 {
-display: grid;
-grid-template-columns: repeat(3, 3fr); 
-grid-template-rows: auto; 
-grid-gap: 5px;
 
-text-transform: capitalize;
-font-weight: 600;
-
-
-       
-        }
-      
       
       
         .pokemon__stats-label1{
@@ -299,7 +332,7 @@ font-weight: 600;
         }
       
 
-  
+   */
 
     }
 
