@@ -51,7 +51,26 @@ padding: 1rem;
 }
 
 .bx-arrow-back{
+  background-color: rgb(240, 81, 81);
+  width: 50px;
+  border-radius: 50%;
+  font-size: 30px;
+display: flex; flex-direction: row;
+align-items: center;
+text-align: center;
+justify-content: center;
+aspect-ratio: 1;
+color: #ffffff;
+}
+
+.goback{
+
 font-size: 30px;
+display: flex; flex-direction: row;
+align-items: center;
+text-align: center;
+margin-left: 15px;
+
 }
 
 

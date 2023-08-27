@@ -20,8 +20,11 @@ const PokeInfo = () => {
   return (
     <>
     <PokeHeader/>
-    <Link to="/pokedex"><i className='bx bx-arrow-back' >Go Back</i></Link>
-    
+    <article className='goback'>
+    <Link to="/pokedex"><i className='bx bx-arrow-back' ></i></Link>
+    <p>Go Back</p>
+    </article>
+
         <div className='poke_render'>
 
         {
