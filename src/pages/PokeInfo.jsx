@@ -1,30 +1,28 @@
-import React, { useEffect } from 'react'
+import React, { useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import useFetch from '../hooks/UseFetch'
 import './pageStyles/pokeinfo.css'
 import PokeHeader from '../shared/PokeHeader'
+import { Link} from 'react-router-dom';
 
 
 const PokeInfo = () => {
-
-
-
     const {name} =useParams()
-
     const url = `https://pokeapi.co/api/v2/pokemon/${name}`
     const [pokemon, getPokemonByName, hasError] = useFetch(url)
-    
-
+  
 
     useEffect(() => {
         getPokemonByName()
     }, [name])
-    
-console.log();
+
 
   return (
-    <div className='poke_render'>
-      <PokeHeader/>
+    <>
+    <PokeHeader/>
+    <Link to="/pokedex"><i className='bx bx-arrow-back' >Go Back</i></Link>
+    
+        <div className='poke_render'>
 
         {
             hasError
@@ -101,6 +99,8 @@ console.log();
         }
 
         </div>
+    </>
+
   )
 }
 

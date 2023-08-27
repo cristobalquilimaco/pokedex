@@ -35,7 +35,7 @@ const Pokedex = () => {
     return (
     <div className='page__selectpokemon'>
   <PokeHeader/>
-    
+  
       <p className='user__trainer__name'>Welcome <span className='trainer'>{trainerName}</span></p>
         <div className='search__poke'>
         <FormPoke urlBase={urlBase} setFormUrl={setFormUrl}
