@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import useFetch from '../hooks/UseFetch'
 import './pageStyles/pokeinfo.css'
+import PokeHeader from '../shared/PokeHeader'
 
 
 const PokeInfo = () => {
@@ -23,6 +24,7 @@ console.log();
 
   return (
     <div className='poke_render'>
+      <PokeHeader/>
 
         {
             hasError

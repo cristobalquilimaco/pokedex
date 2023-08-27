@@ -38,9 +38,7 @@ const FormPoke = ({
         <button>Search</button>
       </form>
       <select className='select__type' onChange={handleChange} value={selectedType}>
-        <option className='option__type_pokemon' value={urlBase}>
-        {types?.results[0].name}
-        </option>
+
         {types?.results.map(type => (
           <option
             className='select_poke_search'
