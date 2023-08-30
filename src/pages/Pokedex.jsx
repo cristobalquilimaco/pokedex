@@ -7,6 +7,7 @@ import Pagination from '../components/Pokedex/Pagination'
 
 import useFetch from '../hooks/UseFetch'
 import PokeHeader from '../shared/PokeHeader'
+import LoadinPage from '../components/LoadinPage'
 
 
 
@@ -28,7 +29,11 @@ const Pokedex = () => {
   // Pagination
 
   useEffect(() => {
-    getAllPokemons(urlBase);
+    getAllPokemons(urlBase)
+    .then(()=> {
+      setIsLoading(false)
+    })
+
   }, [formUrl, urlBase]);
   
   const totalPokemons = pokemons?.count;
@@ -46,6 +51,11 @@ const Pokedex = () => {
               setLimitValue={setLimitValue}
         />
         </div>
+        {isLoading ? (
+          <LoadinPage/>
+        ) : (
+          <>
+        
         <PokeContainer formUrl={formUrl}
         pokePerPage={pokePerPage}
         currentPoke={currentPoke}
@@ -61,7 +71,8 @@ const Pokedex = () => {
              setCurrentPoke={setCurrentPoke}
              totalPokemons={totalPokemons}
      />
-
+     </>
+    )}
     </div>
   )
 }
