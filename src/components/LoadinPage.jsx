@@ -1,8 +1,11 @@
 import React from 'react'
+import charmanderLoading from"/public/charmander-poke.gif"
 
 const LoadinPage = () => {
   return (
-    <div>LoadinPage</div>
+    <div>
+        <img src={charmanderLoading} alt="" />
+    </div>
   )
 }
 
