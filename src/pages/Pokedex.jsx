@@ -22,6 +22,7 @@ const Pokedex = () => {
   const [formUrl, setFormUrl] = useState(urlBase)
   const { trainerName } = useSelector(state => state)
   const [pokemons, getAllPokemons] = useFetch(urlBase)
+  const [isLoading, setIsLoading] = useState(true)
 
 
   // Pagination
